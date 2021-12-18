@@ -8,6 +8,8 @@ URL: https://surefoot.me/engineer-application-sandbox-v1/
 Dev notes:
 In my code, I am attaching something that will "listen" to an some event triggered by the user. Once that event is triggered, a series of checks will be performed to determine of the form passed validation. If not, the user will be displayed a message on what to do next. If it passes validation, the form will be submitted.
 
+My initial approach here was to use a submit event listener and attach it to the form. I tried this with stopImmediatePropogation() to try to prevent the other event listeners that were already linked to the form from being called. This approach ended up not working as I anticipated as the other listeners would be called after mine, so I switched to this tactic.
+
 Currently, the form only checks for a valid email.
 Please execute your code on DOM ready and use javascript to handle validation.
 Styling/layout of error messaging is up to you.
